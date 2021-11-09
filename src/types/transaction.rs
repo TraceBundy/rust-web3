@@ -106,7 +106,7 @@ pub struct Receipt {
     #[serde(rename = "type", default, skip_serializing_if = "Option::is_none")]
     pub transaction_type: Option<U64>,
     /// Effective gas price
-    #[serde(rename = "effectiveGasPrice")]
+    #[serde(rename = "effectiveGasPrice", skip)]
     pub effective_gas_price: U256,
 }
 
